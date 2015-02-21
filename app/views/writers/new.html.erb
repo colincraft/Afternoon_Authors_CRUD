@@ -1,0 +1,19 @@
+<h2>Add a new Writer!</h2>
+<% if @writer.errors.any?%>
+  <% @writer.errors.full_messages.each do |error|%>
+    <p class="text-danger">
+      <%= error %>
+    </p>
+  <% end%>
+<% end %>
+
+<%= form_for @writer do |f| %>
+<p>
+<%= f.label :name %>
+<%= f.text_field :name %>
+<%= f.submit %>
+</p>
+<p>
+<%= link_to "Back to Home", writers_path%>
+</p>
+<% end %>

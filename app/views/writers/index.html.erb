@@ -1,0 +1,10 @@
+
+<h1>Thy Writers.</h1>
+
+<% @writer.each do |writer| %>
+<p>
+<%= link_to writer.name, writer_path(writer)%>
+</p>
+
+<% end %>
+<%= link_to "Add a writer!", new_writer_path %>
